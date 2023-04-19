@@ -31,7 +31,7 @@ function initial() {
   });
 }
 var corsOptions = {
-  // origin: "https://photography-portfolio-front.herokuapp.com",
+  
 };
 
 app.use(cors(corsOptions));
@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to helpOut application." });
+  res.json({ message: "Welcome to agro application." });
 });
 
 

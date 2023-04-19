@@ -1,7 +1,5 @@
 const db = require("../models");
 const Posts = db.posts;
-const Comments = db.comments;
-const upload = require("../middleware/uploadArray");
 
 
 exports.createPost = async (req, res) => {
@@ -50,12 +48,7 @@ exports.findPostById = (req, res) => {
 
 exports.findAll = (req, res) => {
   return Posts.findAll({
-    // attributes: [
-    //   "*",
-    //   [db.Sequelize.fn('date_format', db.Sequelize.col('post.createdAt'), '%d %b %y'), 'col_name']
 
-    // ],
-    include: ["comments"],
   }).then((package) => {
     console.log(">> All tutorials", JSON.stringify(package, null, 2));
     res.send(package);

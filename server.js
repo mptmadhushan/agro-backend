@@ -49,6 +49,7 @@ app.get("/", (req, res) => {
 
 
 require("./app/routes/posts.routes")(app);
+require("./app/routes/tb_users.routes")(app);
 
 // set port, listen for requests
 const PORT = 3002;
